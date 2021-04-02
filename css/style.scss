@@ -36,24 +36,86 @@ header {
     position: fixed;
     top: 0;
     z-index: 2;
+    .logo {
+        font-size: 26px;
+        color: #fff;
+    }
+    #navi {
+        ul {
+            display: flex;
+            li {
+                margin-left: 55px;
+                a {
+                    font-size: 16px;
+                    color: #fff;
+                }
+            }
+        }
+    }
 }
 
-header .logo{
-    font-size: 26px;
-    color: #fff;
-}
+@media screen and (max-width: 750px) {
+    header {
+        padding: 24px 15px;
+        #hamburger {
+            width: 25px;
+            height: 16px;
+            position: relative;
+            z-index: 2;
+            .hamburger_line {
+                width: 100%;
+                height: 2px;
+                background: #fff;
+                display: block;
+                position: absolute;
+                transition: .5s;
+            }
+            #line01 {
+                top: 0px;
+            }
+            #line02 {
+                top: 8px;
+            }
+            #line03 {
+                top: 16px;
+            }
+            #line01.open {
+                transform: rotateZ(45deg);
+                top: 8px;
+            }
+            #line02.open {
+                transform: rotateZ(-45deg);
+            }
+            #line03.open {
+                display: none;
+            }
+        }
+        #navi {
+            opacity: 0;
+            background: #1B1310;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            transition: .6s;
+            ul {
+                position: relative;
+                top: 40%;
+                flex-direction: column;
+                align-items: center;
+                height: 100%;
+                li {
+                    margin: 0 0 50px 0;
+                }
+            }
+        }
+        #navi.open {
+            opacity: 1;
+        }
+    }
 
-header nav ul {
-    display: flex;
-}
-
-header nav ul li {
-    margin-left: 55px;
-}
-
-header nav ul li a {
-    font-size: 16px;
-    color: #fff;
 }
 
 .kv {
@@ -70,6 +132,17 @@ header nav ul li a {
     }
     img {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .kv {
+        h1 {
+            font-size: 30px;
+            padding: 30px 40px;
+            top: 45%;
+            left: 9%;
+        }
     }
 }
 
@@ -138,6 +211,39 @@ header nav ul li a {
     margin-top: 150px;
 }
 
+@media screen and (max-width: 750px) {
+    .content {
+        width: 100%;
+        padding: 0 15px;
+        h3,dt {
+            font-size: 20px;
+            line-height: 2;
+            margin-bottom: 30px;
+        }
+        &_card {
+            flex-direction: column;
+            img {
+                width: 100%;
+                order: 2;
+            }
+            dl {
+                margin: 0 0 40px 0;
+                order: 1;
+            }
+        }
+        .news_card {
+            width: 92.8%;
+            margin: 0 auto 50px;
+        }
+        .news_card:not(:nth-of-type(3n)) {
+            margin-right: auto;
+        }
+        .news_card:not(:nth-of-type(-n+3)) {
+            margin-top: 0px;
+        }
+    }
+}
+
 .faq {
     width: 48.6%;
     h2 {
@@ -171,6 +277,16 @@ header nav ul li a {
         resize: none;
         height: 171px;
         margin-bottom: 50px;
+    }
+}
+@media screen and (max-width: 750px) {
+    .faq {
+        width: 100%;
+        input {
+            &.submit {
+                width: 68%;
+            }
+        }
     }
 }
 

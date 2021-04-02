@@ -50,19 +50,91 @@ header .logo {
   color: #fff;
 }
 
-header nav ul {
+header #navi ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-header nav ul li {
+header #navi ul li {
   margin-left: 55px;
 }
 
-header nav ul li a {
+header #navi ul li a {
   font-size: 16px;
   color: #fff;
+}
+
+@media screen and (max-width: 750px) {
+  header {
+    padding: 24px 15px;
+  }
+  header #hamburger {
+    width: 25px;
+    height: 16px;
+    position: relative;
+    z-index: 2;
+  }
+  header #hamburger .hamburger_line {
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    position: absolute;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  header #hamburger #line01 {
+    top: 0px;
+  }
+  header #hamburger #line02 {
+    top: 8px;
+  }
+  header #hamburger #line03 {
+    top: 16px;
+  }
+  header #hamburger #line01.open {
+    -webkit-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
+    top: 8px;
+  }
+  header #hamburger #line02.open {
+    -webkit-transform: rotateZ(-45deg);
+            transform: rotateZ(-45deg);
+  }
+  header #hamburger #line03.open {
+    display: none;
+  }
+  header #navi {
+    opacity: 0;
+    background: #1B1310;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    -webkit-transition: .6s;
+    transition: .6s;
+  }
+  header #navi ul {
+    position: relative;
+    top: 40%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+  }
+  header #navi ul li {
+    margin: 0 0 50px 0;
+  }
+  header #navi.open {
+    opacity: 1;
+  }
 }
 
 .kv {
@@ -81,6 +153,15 @@ header nav ul li a {
 
 .kv img {
   width: 100%;
+}
+
+@media screen and (max-width: 750px) {
+  .kv h1 {
+    font-size: 30px;
+    padding: 30px 40px;
+    top: 45%;
+    left: 9%;
+  }
 }
 
 .content {
@@ -170,6 +251,46 @@ header nav ul li a {
   margin-top: 150px;
 }
 
+@media screen and (max-width: 750px) {
+  .content {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .content h3, .content dt {
+    font-size: 20px;
+    line-height: 2;
+    margin-bottom: 30px;
+  }
+  .content_card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .content_card img {
+    width: 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .content_card dl {
+    margin: 0 0 40px 0;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .content .news_card {
+    width: 92.8%;
+    margin: 0 auto 50px;
+  }
+  .content .news_card:not(:nth-of-type(3n)) {
+    margin-right: auto;
+  }
+  .content .news_card:not(:nth-of-type(-n+3)) {
+    margin-top: 0px;
+  }
+}
+
 .faq {
   width: 48.6%;
 }
@@ -211,6 +332,15 @@ header nav ul li a {
   resize: none;
   height: 171px;
   margin-bottom: 50px;
+}
+
+@media screen and (max-width: 750px) {
+  .faq {
+    width: 100%;
+  }
+  .faq input.submit {
+    width: 68%;
+  }
 }
 
 footer {
