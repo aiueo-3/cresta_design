@@ -9,4 +9,8 @@ function menu_toggle(){
             }
             navi.classList.toggle('open');
         });
+
+        if(navi.classList.contains('open')==true){
+        
+        }
 }menu_toggle();
