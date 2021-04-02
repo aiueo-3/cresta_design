@@ -118,6 +118,7 @@ header #navi ul li a {
     transition: .6s;
   }
   header #navi ul {
+    display: none;
     position: relative;
     top: 40%;
     -webkit-box-orient: vertical;
@@ -134,6 +135,11 @@ header #navi ul li a {
   }
   header #navi.open {
     opacity: 1;
+  }
+  header #navi.open ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 

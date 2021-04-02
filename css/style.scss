@@ -101,6 +101,7 @@ header {
             overflow: hidden;
             transition: .6s;
             ul {
+                display: none;
                 position: relative;
                 top: 40%;
                 flex-direction: column;
@@ -113,6 +114,9 @@ header {
         }
         #navi.open {
             opacity: 1;
+            ul {
+                display: flex;
+            }
         }
     }
 
