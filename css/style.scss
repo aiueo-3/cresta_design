@@ -68,6 +68,9 @@ header nav ul li a {
         border: 2px solid #fff;
 
     }
+    img {
+        width: 100%;
+    }
 }
 
 .content {
@@ -92,6 +95,9 @@ header nav ul li a {
     &_card {
         display: flex;
         margin-bottom: 50px;
+        img {
+            width: 46.6%;
+        }
         dl {
             margin-right: 0;
             margin-left: 70px;
@@ -162,6 +168,7 @@ header nav ul li a {
         }
     }
     textarea {
+        resize: none;
         height: 171px;
         margin-bottom: 50px;
     }

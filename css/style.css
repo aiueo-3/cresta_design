@@ -79,6 +79,10 @@ header nav ul li a {
   border: 2px solid #fff;
 }
 
+.kv img {
+  width: 100%;
+}
+
 .content {
   width: 71.5%;
   margin: 0 auto;
@@ -107,6 +111,10 @@ header nav ul li a {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 50px;
+}
+
+.content_card img {
+  width: 46.6%;
 }
 
 .content_card dl {
@@ -200,6 +208,7 @@ header nav ul li a {
 }
 
 .faq textarea {
+  resize: none;
   height: 171px;
   margin-bottom: 50px;
 }
