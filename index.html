@@ -3,43 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
   <title>Cresta Desgin</title>
 </head>
 <body>
   <header>
-    <a href="#">クリ★スタ</a>
+    <a href="#" class="logo">クリ★スタ</a>
     <nav>
       <ul>
-        <li>About</li>
-        <li>Service</li>
-        <li>Contents</li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#contents">Contents</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section>
+    <div class="kv">
+      <img src="img/fv-bgi.jpg" class="only-pc" alt="Cresta Design.">
+      <img src="img/fv-bgi_sp.jpg" class="only-sp" alt="Cresta Design.">
       <h1>Cresta Design.</h1>
-    </section>
+    </div>
 
-    <section>
+    <section class="content" id="about">
       <h2>About</h2>
       <h3>ミニマルで<br>洗練されたデザインを。</h3>
       <p>近年、ミニマルなデザインが流行しています。そこで弊社では、クライアント企業様新規サービス等の課題に対してミニマルで洗練されたデザインを実現させることで解決のサポートを致します。もちろん全てのサービスにおいてミニマルなデザインが課題解決になるわけではないので、課題や今後のサービスの展開等しっかりとヒアリングを行なった上でご提案させて頂きます。</p>
     </section>
 
-    <section>
+    <section class="content" id="service">
       <h2>Service</h2>
-      <div>
-        <img src="" alt="">
+      <div class="content_card">
+        <img src="img/service-image.jpg" alt="リリース時のサポートでサービスのブランディングを">
         <dl>
           <dt>リリース時のサポートで<br>サービスのブランディングを</dt>
           <dd>弊社では、リリース時もサポートさせて頂きます。プレスリリース用のサイトや動画制作を通して、サービスのブランディングを行わせて頂きます。</dd>
         </dl>
       </div>
 
-      <div>
-        <img src="" alt="">
+      <div class="content_card content_card--even">
+        <img src="img/service-image02.jpg" alt="リリース後のサポートで効果を最大化させる">
         <dl>
           <dt>リリース後のサポートで<br>効果を最大化させる</dt>
           <dd>弊社では、リリース後もサポートさせて頂きます。サービスはリリース後に様々な課題にぶつかります。そこでクライアント様と一緒に改善を行うことで、デザインの効果を最大化させます。</dd>
@@ -47,32 +50,27 @@
       </div>
     </section>
 
-    <section>
+    <section class="content">
       <h2>News</h2>
-      <div>
-        <div>
-          <img src="" alt="">
-          <p></p>
+      <div class="news_card--wrapper">
+        <div class="news_card">
+          <img src="img/card-image1.jpg" alt="">
+          <p>新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
         </div>
 
-        <div>
-          <img src="" alt="">
-          <p></p>
+        <div class="news_card">
+          <img src="img/card-image2.jpg" alt="">
+          <p>新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
         </div>
 
-        <div>
-          <img src="" alt="">
-          <p></p>
-        </div>
-
-        <div>
-          <img src="" alt="">
-          <p></p>
+        <div class="news_card">
+          <img src="img/card-image3.jpg" alt="">
+          <p>新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="content faq" id="contents">
       <h2>お問い合わせ</h2>
       <form>
         <p>担当者名</p>
@@ -85,11 +83,16 @@
         <input type="text" size="100">
 
         <p>お問い合わせ内容</p>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-      </form>
+        <textarea></textarea>
 
+        <input type="submit" value="送信" class="submit">
+      </form>
     </section>
+
+    <footer>
+      <small>©︎crest.design all rights reserved</small>
+    </footer>
   </main>
-  
+  <script type="text/javascript" src="js/active.js"></script>
 </body>
 </html>
