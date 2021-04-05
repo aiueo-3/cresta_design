@@ -106,7 +106,7 @@ header #navi ul li a {
     display: none;
   }
   header #navi {
-    opacity: 0;
+    display: none;
     background: #1B1310;
     width: 100%;
     height: 100%;
@@ -114,8 +114,6 @@ header #navi ul li a {
     top: 0;
     left: 0;
     overflow: hidden;
-    -webkit-transition: .6s;
-    transition: .6s;
   }
   header #navi ul {
     display: none;
@@ -134,7 +132,7 @@ header #navi ul li a {
     margin: 0 0 50px 0;
   }
   header #navi.open {
-    opacity: 1;
+    display: block;
   }
   header #navi.open ul {
     display: -webkit-box;
@@ -286,7 +284,7 @@ header #navi ul li a {
             order: 1;
   }
   .content .news_card {
-    width: 92.8%;
+    width: 320px;
     margin: 0 auto 50px;
   }
   .content .news_card:not(:nth-of-type(3n)) {
